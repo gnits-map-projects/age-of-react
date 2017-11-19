@@ -1,0 +1,8 @@
+**/node_modules/
+**/build/
+/nodejs
+/npm
+build
+.DS_Store
+*.swp
+*.swo
