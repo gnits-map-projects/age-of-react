@@ -19,6 +19,10 @@ You can find the most recent version of create-react-app documentation [here](ht
 
 # Reference
 
+## SuperAgent
+
+- http://visionmedia.github.io/superagent/
+
 ## Map
 
 - Leaflet
@@ -40,3 +44,4 @@ You can find the most recent version of create-react-app documentation [here](ht
 - https://github.com/toddmotto/public-apis
 - https://www.programmableweb.com/category/all/apis
 - https://any-api.com/
+
