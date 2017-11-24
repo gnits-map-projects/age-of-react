@@ -23,6 +23,23 @@ body {
   color: #4abf4a;
 }
 
+.chat-window .messages {
+    height: 600px;
+    overflow: hidden;
+}
+
+.chat-window .messages ul {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chat-window .messages li{
+    display: flex;
+    align-items: center;
+}
+
 .chat-window .messages ul, .chat-window .messages li {
   margin: 0;
   padding: 0;
