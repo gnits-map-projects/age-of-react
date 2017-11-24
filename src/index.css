@@ -3,3 +3,79 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.chat-window {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.chat-window header {
+  padding: 8px;
+  background: #37444a;
+  overflow: hidden;
+}
+
+.chat-window .status {
+  float: right;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.chat-window .status span {
+  color: #4abf4a;
+}
+
+.chat-window .messages ul, .chat-window .messages li {
+  margin: 0;
+  padding: 0;
+}
+
+.chat-window .messages ul li {
+  list-style: none;
+}
+
+.chat-window .messages ul li:nth-child(odd) {
+  background-color: rgba(176, 229, 245, 0.3);
+}
+
+.chat-window .messages ul li:nth-child(even) {
+  background-color: white;
+}
+
+.message-container {
+  padding: 6px;
+  overflow: hidden;
+}
+
+.message-container .icon {
+  background-size: 18px;
+  padding: 6px 12px 6px 6px;
+  color: #333;
+  font-weight: 200;
+  margin: 0;
+  float: left;
+}
+
+.message-container .icon span {
+  background: transparent url('/../public/assets/icon.svg') no-repeat 0 50%;
+}
+
+.message-container .content {
+  float: left;
+}
+
+.message-container .meta {
+  margin-bottom: 4px;
+}
+
+.message-container .meta .name {
+  font-family: monospace;
+}
+
+.message-container .meta .timestamp {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.chat-window footer {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.03);
+}
