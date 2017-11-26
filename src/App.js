@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+const App = (props) => (
+  <Map center={props.position} zoom={15}>
+    <TileLayer
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+    />
+    <Marker position={props.position}>
+      <Popup>
+        <span>
+          Hej, we are here!<br /> Now where is Charminar?.
+        </span>
+      </Popup>
+    </Marker>
+  </Map>
+);
+
+App.propTypes = {
+  position: PropTypes.arrayOf(PropTypes.number).isRequired,
 }
 
 export default App;
