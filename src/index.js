@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import KitchenSink from './components/kitchen-sink/KitchenSink';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<KitchenSink />, document.getElementById('root'));
 registerServiceWorker();
