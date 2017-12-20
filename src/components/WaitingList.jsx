@@ -8,7 +8,7 @@ class WaitingList extends React.Component {
                 <h2>Waiting List:</h2>
                 <ol>
                     {
-                        this.props.data.map((name) => (<li key={name}>{name}</li>))
+                        this.props.data.map(({name, email}) => (<li key={name}>{name + "  " + email}</li>))
                     }
                 </ol>
             </div>

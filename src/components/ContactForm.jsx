@@ -4,13 +4,21 @@ import React from 'react';
 class ContactForm extends React.Component {
     constructor (props) {
         super(props);
+        this.state = {
+            email: "",
+        };
         this.onSubmit = this.onSubmit.bind(this);
+        this.onEmailChange = this.onEmailChange.bind(this);
     }
 
     onSubmit (event) {
-        console.log(event, this.name.value);
-        this.props.onSubmit({ name: this.name.value })
+        console.log(event, this.name.value, this.props);
+        this.props.onSubmit({ name: this.name.value, email: this.state.email })
         event.preventDefault();
+    }
+
+    onEmailChange (event) {
+        this.setState({ email: event.target.value });
     }
 
     render () {
@@ -24,7 +32,14 @@ class ContactForm extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
+                        <input
+                            type="email"
+                            className="form-control"
+                            id="email"
+                            aria-describedby="emailHelp"
+                            placeholder="Enter email"
+                            onChange={this.onEmailChange}
+                            value={this.state.email} />
                         <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div className="form-group">

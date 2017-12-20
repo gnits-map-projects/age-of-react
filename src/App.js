@@ -12,9 +12,7 @@ class App extends Component {
   }
 
   onRegister (data) {
-    const { name } = data;
-
-    this.setState({ registrations: [name, ...this.state.registrations]})
+    this.setState({ registrations: [data, ...this.state.registrations]})
   }
 
   render() {
