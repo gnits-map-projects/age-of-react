@@ -9,12 +9,13 @@ class ContactForm extends React.Component {
 
     onSubmit (event) {
         console.log(event, this.name.value);
+        this.props.onSubmit({ name: this.name.value })
         event.preventDefault();
     }
 
     render () {
         return (
-            <div>
+            <div className={this.props.className}>
                 <h2>Contact me:</h2>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
