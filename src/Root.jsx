@@ -5,7 +5,7 @@ import {
     Link
 } from 'react-router-dom'
 import App from './App';
-import Second from './Second';
+import GitMe from './GitMe';
 
 
 class Root extends React.Component {
@@ -14,14 +14,14 @@ class Root extends React.Component {
             <Router>
                 <div>
                     <ul>
-                        <li><Link to="/">App</Link></li>
-                        <li><Link to="/about">Second</Link></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About Me</Link></li>
                     </ul>
 
                     <hr />
 
                     <Route exact path="/" component={App} />
-                    <Route path="/about" component={Second} />
+                    <Route path="/about" component={GitMe} />
                 </div>
             </Router>
         )

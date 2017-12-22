@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Map, Marker, TileLayer, Polyline } from 'react-leaflet'
 import request from 'superagent';
 
