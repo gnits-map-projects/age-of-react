@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const waveRock = [17.4191667,78.3460251]
+const gnit = [17.4118166,78.3967619]
 
-ReactDOM.render(<App position={waveRock} />, document.getElementById('root'));
+ReactDOM.render(<App position={gnit} />, document.getElementById('root'));
 registerServiceWorker();
