@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Map, Marker, TileLayer, Polyline } from 'react-leaflet'
 import request from 'superagent';
 
-class App extends React.Component {
+class Second extends React.Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +27,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Map center={[17.4118166, 78.3967619]} zoom={12}>
+      <Map center={[17.3615636, 78.4724758]} zoom={12}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
@@ -36,11 +36,10 @@ class App extends React.Component {
           Object.keys(this.state.locations).map(
             (location) => <Marker key={location} position={this.state.locations[location]} />)
         }
-        <Polyline positions={Object.values(this.state.locations)} />
       </Map>
     );
   }
 };
 
 
-export default App;
+export default Second;
