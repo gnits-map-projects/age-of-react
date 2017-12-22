@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 
 class ChatMessage extends React.Component {
@@ -11,12 +12,10 @@ class ChatMessage extends React.Component {
                     </div>
                     <div className="content">
                         <div className="meta">
-                            <span className="name">@me</span>
-                            <span className="timestamp">3 minutes ago</span>
+                            <span className="name">@{this.props.name}</span>
+                            <span className="timestamp">{moment(this.props.when).fromNow()}</span>
                         </div>
-                        <div className="message">
-                            Hey, what are you up to?
-                        </div>
+                        <div className="message">{this.props.message}</div>
                     </div>
                 </div>
             </li>

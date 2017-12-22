@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ChatServer from './components/chat';
 import Header from './components/Header';
@@ -9,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div class="container">
+        <div className="container">
           <ChatServer />
           <hr />
             <footer>
