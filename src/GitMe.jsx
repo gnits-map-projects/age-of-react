@@ -19,13 +19,16 @@ class GitMe extends React.Component {
 
   render() {
     return (
-      <ol>
-        {
-          Object.keys(this.state.gitme).map((key) => {
-            return <li>{key + " -> " + this.state.gitme[key]}</li>
-          })
-        }
-      </ol>
+      <div>
+        <ol>
+          {
+            Object.keys(this.state.gitme).map((key) => {
+              return <li>{key + " -> " + this.state.gitme[key]}</li>
+            })
+          }
+        </ol>
+        <hr />
+      </div>
     );
   }
 };
