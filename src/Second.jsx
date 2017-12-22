@@ -20,9 +20,7 @@ class Second extends React.Component {
     const promise = request.get("https://api.github.com/users/kra3");
     const onSucess = (val) => { this.setState({ user: val.body.login }) };
     promise.then(onSucess);
-    request
-      .get("http://my.bookapp.com:9000/locations")
-      .then(console.log);
+
   }
 
   render() {
